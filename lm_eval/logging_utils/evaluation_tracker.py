@@ -9,10 +9,8 @@ from huggingface_hub import HfApi
 
 from lm_eval.utils import (
     eval_logger,
-    handle_non_serializable,
-    hash_string,
 )
-
+from logging_utils.utils import _handle_non_serializable
 
 @dataclass(init=False)
 class GeneralConfigTracker:
@@ -147,7 +145,7 @@ class EvaluationTracker:
                 dumped = json.dumps(
                     results,
                     indent=2,
-                    default=handle_non_serializable,
+                    default=_handle_non_serializable,
                     ensure_ascii=False,
                 )
 
