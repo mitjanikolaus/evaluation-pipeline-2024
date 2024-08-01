@@ -1552,7 +1552,7 @@ class AutoMaskedLM(HFLM):
         re_ords = Collator(
             [reg.args for reg in requests],
             sort_fn=_collate,
-            group_by="gen_kwargs",
+            group_by=None,
             group_fn=lambda x: x[1],
         )
         adaptive_batch_size = None
