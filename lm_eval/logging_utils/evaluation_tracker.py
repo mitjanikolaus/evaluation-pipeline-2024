@@ -10,7 +10,7 @@ from huggingface_hub import HfApi
 from lm_eval.utils import (
     eval_logger,
 )
-from logging_utils.utils import _handle_non_serializable
+from lm_eval.logging_utils.utils import _handle_non_serializable
 
 @dataclass(init=False)
 class GeneralConfigTracker:
