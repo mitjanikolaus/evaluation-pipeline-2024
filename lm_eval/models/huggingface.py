@@ -104,7 +104,7 @@ class HFLM(TemplateLM):
         image_src_split: Optional[str] = None,
         image_key: Optional[str] = None,
         truncation: Optional[bool] = False,
-        logits_cache: bool = True,
+        logits_cache: bool = False,
         max_length: Optional[int] = None,
         device: Optional[str] = "cuda",
         dtype: Optional[Union[str, torch.dtype]] = "auto",
