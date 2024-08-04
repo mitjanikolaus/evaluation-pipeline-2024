@@ -10,5 +10,8 @@ should_decontaminate: true
 doc_to_decontamination_query: "{{sentence_good}} {{sentence_bad}}"
 metric_list:
   - metric: acc
+    higher_is_better: True
+    aggregation: "mean"
+
 metadata:
   version: 1.0
